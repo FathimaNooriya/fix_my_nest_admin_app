@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../core/New folder/textfield_and_tittle.dart';
+import '../../../core/common_widgets/textfield_and_tittle.dart';
 import '../../../core/padding.dart';
 import '../bloc/cubit/auth_cubit.dart';
 import '../widgets/my_button1.dart';
