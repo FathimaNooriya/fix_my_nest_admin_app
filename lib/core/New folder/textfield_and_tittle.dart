@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:webapp/color_and_font.dart';
-import 'package:webapp/padding.dart';
+
+import '../color_and_fond.dart';
+import '../padding.dart';
+
 
 
 class TextFirmFieldWithTitle extends StatelessWidget {
