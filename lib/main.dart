@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'auth/data/repositories/signin_repo.dart';
+import 'auth/presentation/bloc/cubit/auth_cubit.dart';
+import 'auth/presentation/pages/splash_screen.dart';
 
 int index = 0;
 Future<void> main() async {
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => AuthCubit()),
+        BlocProvider(create: (context) => AuthCubit(AuthRepo())),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
