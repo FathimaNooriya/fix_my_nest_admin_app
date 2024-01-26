@@ -13,7 +13,7 @@ class AdminSignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
+    return Scaffold(
       body: Center(
         child: Card(
           child: Container(
@@ -63,7 +63,6 @@ class AdminSignUpScreen extends StatelessWidget {
                           }
                           return null;
                         }),
-                    
                     BlocConsumer<AuthCubit, AuthState>(
                         listener: (context, state) {
                       if (state is AuthSuccess) {
@@ -83,15 +82,13 @@ class AdminSignUpScreen extends StatelessWidget {
                       }
                       return MyButton1(
                           buttonText: "Sign Up",
-                          buttonPressed: () {
+                          buttonPressed: () async {
                             final bool val = context
                                 .read<AuthCubit>()
                                 .sigupInKey
                                 .currentState!
                                 .validate();
                             if (val) {
-                              debugPrint(
-                                  "............. Correct...............");
                               context.read<AuthCubit>().registration(
                                   context: context,
                                   signUpEmail: context
@@ -110,7 +107,6 @@ class AdminSignUpScreen extends StatelessWidget {
                             }
                           });
                     }),
-
                     TextWithLink(
                       bottomText: "Already have an account? then,",
                       linkText: "Login",

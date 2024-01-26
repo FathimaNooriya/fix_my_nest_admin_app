@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'admin_signup_screen.dart';
+
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -10,8 +12,8 @@ class SplashScreen extends StatelessWidget {
       body: Center(
         child: InkWell(
           onTap: () {
-            // Navigator.of(context).push(
-            //     MaterialPageRoute(builder: (context) => const AdminSignUpScreen()));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const AdminSignUpScreen()));
           },
           splashColor: const Color.fromARGB(255, 2, 88, 47),
           radius: 200,

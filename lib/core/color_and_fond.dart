@@ -33,7 +33,7 @@ class ColorAndFont {
   );
   static final Normal_TEXT = GoogleFonts.balooBhai2(
     textStyle: const TextStyle(
-        fontWeight: FontWeight.w400, color: GREEN, fontSize: 18),
+        fontWeight: FontWeight.w400, color: GREEN, fontSize: 18,),
   );
   static final Normal_wt_TEXT = GoogleFonts.balooBhai2(
     textStyle: const TextStyle(

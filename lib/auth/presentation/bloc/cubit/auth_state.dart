@@ -20,3 +20,23 @@ class AuthError extends AuthState {
   final String authResults;
   AuthError({required this.authResults});
 }
+class SigninLoading extends AuthState {
+  bool isloading = true;
+}
+
+class SigninSuccess extends AuthState {
+  bool isloading = false;
+  final String authResults;
+
+  SigninSuccess({required this.authResults});
+}
+
+class SigninError extends AuthState {
+  bool isloading = false;
+  final String authResults;
+  SigninError({required this.authResults});
+}
+
+class VerifySuccess extends AuthState {}
+
+class VerifyFailed extends AuthState {}

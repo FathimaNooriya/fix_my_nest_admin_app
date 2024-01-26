@@ -51,6 +51,7 @@ dependencies:
   firebase_storage: ^11.4.1
   open_file: ^3.3.2
   image_picker: ^1.0.4
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:

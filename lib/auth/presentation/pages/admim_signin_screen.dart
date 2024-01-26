@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/common_widgets/textfield_and_tittle.dart';
@@ -9,7 +8,6 @@ import '../widgets/text_with_link.dart';
 import '../widgets/tittle.dart';
 import 'admin_login_otp.dart';
 import 'admin_signup_screen.dart';
-
 
 class AdminSignInScreen extends StatelessWidget {
   const AdminSignInScreen({super.key});
@@ -68,14 +66,14 @@ class AdminSignInScreen extends StatelessWidget {
                         }),
                     BlocConsumer<AuthCubit, AuthState>(
                         listener: (context, state) {
-                      if (state is AuthSuccess) {
+                      if (state is SigninSuccess) {
                         // Navigator.pushReplacement(
                         //     context,
                         //     MaterialPageRoute(
                         //         builder: (context) => const DashboardScreen()));
                       }
                     }, builder: (context, state) {
-                      if (state is AuthLoading) {
+                      if (state is SigninLoading) {
                         return const Center(
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
